@@ -1,2 +1,2 @@
 # Coding-Projects
-Larger (but not all) coding projects
+Some (but not all) C++ coding projects
