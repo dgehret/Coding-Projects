@@ -1,0 +1,53 @@
+===========================================
+ ____   ___  _  _______ __  __  ___  _   _
+|  _ \ / _ \| |/ / ____|  \/  |/ _ \| \ | |
+| |_) | | | | ' /|  _| | |\/| | | | |  \| |
+|  __/| |_| | . \| |___| |  | | |_| | |\  |
+|_|    \___/|_|\_\_____|_|  |_|\___/|_| \_|
+
+===========================================
+
+
+1) The user must select two Pokémon to battle, using either
+index or name (or both)
+
+The user must select up to four moves for each Pokémon. 
+Moves should be selected by index or name (or both).
+If they don't select any moves, give the Pokémon 'Struggle'.
+
+2) The higher speed Pokémon will go first. On a tie, flip a
+coin. After that the Pokémon alternate turns.
+
+3) The user will select a move for the active Pokémon.
+It will do damage to the defending Pokémon.
+If the defending Pokémon reaches 0 hp, the attacker wins!
+
+The formula for damage is this:
+(power * attack)/defense * STAB * type_modifier
+
+Explanation:
+Power   - the power of the move (found in the move database)
+Attack  - the attack stat of the attacking pokemon
+Defense - the defense stat of the defending pokemon
+STAB    - see below
+type_modifier - see below
+
+========================================
+4) STAB
+
+If the type of the move matches the type of the pokemon, it will do +50% bonus
+damage. It can match on either type (so a fire move by a fire/ice pokemon would get
+the +50% bonus damage)
+
+If STAB applies, the multiplier is 1.5x
+If the types don't match, multiplier is 1x
+
+========================================
+
+5) 
+If a Pokémon has the same type as the move it is 
+doing it should do 50% more damage. Some attacking types deal
+extra damage or less damage to defending types, as shown here:
+https://bulbapedia.bulbagarden.net/wiki/Type/Type_chart#Generation_I
+Values are stored in a file called "type_system.txt"
+
